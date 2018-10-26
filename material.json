@@ -1,0 +1,27 @@
+{
+	"name": "Material",
+	"key": "material",
+	"resources": [
+		{
+			"path": "./effect.js",
+			"type": "javascript",
+			"loadOrder": "1"
+		},
+		{
+			"path": "./main.less",
+			"type": "less",
+			"format": "less"
+		}
+	],
+	"author": "AskingQuestions",
+	"license": "MIT",
+	"repository": "https://github.com/AskingQuestions/material",
+	"configure": {
+		"color": {
+			"type": "color",
+			"default": "#0000FF",
+			"label": "Primary Color",
+			"help": "This will change the background and primary colors for this theme"
+		}
+	}
+}

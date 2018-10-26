@@ -1,0 +1,38 @@
+.theme-material {
+	input.input[type="text"], input.input[type="password"], input.input[type="email"], input.input[type="number"] {
+		background-color: transparent;
+		border: none;
+		border-bottom: 1px solid #9e9e9e;
+		border-radius: 0;
+		outline: none;
+		height: 3rem;
+		width: 100%;
+		font-size: 16px;
+		margin: 0 0 8px 0;
+		padding: 0;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		-webkit-box-sizing: content-box;
+		box-sizing: content-box;
+		-webkit-transition: border .3s, -webkit-box-shadow .3s;
+		transition: border .3s, -webkit-box-shadow .3s;
+		transition: box-shadow .3s, border .3s;
+		transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+
+		&:focus {
+			border-bottom: 1px solid #26a69a;
+			-webkit-box-shadow: 0 1px 0 0 #26a69a;
+			box-shadow: 0 1px 0 0 #26a69a;
+		}
+
+		&.valid {
+			border-bottom: 1px solid #26a626;
+			box-shadow: 0 1px 0 0 #26a64c;
+		}
+
+		&.invalid {
+			border-bottom: 1px solid #a62626;
+			box-shadow: 0 1px 0 0 #a62626;
+		}
+	}
+}
