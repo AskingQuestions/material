@@ -127,14 +127,15 @@
 		a {
 			text-decoration: none;
 			color: @primary;
+			cursor: pointer;
 		}
 
-		.dropdown.open {
+		ul.dropdown.open {
 			margin: 0;
 			position: absolute !important;
 		}
 
-		.dropdown:not(.open) {
+		ul.dropdown:not(.open) {
 			margin: 0;
 			transition: background .3s;
 			background: transparent;
@@ -374,7 +375,7 @@
 		}
 	}
 	
-	.dropdown {
+	ul.dropdown {
 		display: inline-block;
 		margin: 0;
 		//transition: height .4s !important;
@@ -408,7 +409,7 @@
 		height: auto;
 	}
 
-	.dropdown.open {
+	ul.dropdown.open {
 		position: absolute !important;
 		background: white;
 		color: @secondary-text;
@@ -444,6 +445,31 @@
 
 		> ul:hover > li, ul {
 			display: block;
+		}
+	}
+
+	a.dropdown.open {
+		> ul {
+			opacity: 1 !important;
+			pointer-events: all;
+			top: 100% !important;
+		}
+	}
+
+	a.dropdown {
+		position: relative;
+		cursor: pointer;
+		
+		> ul {
+			transition: top .3s, opacity .3s;
+			position: absolute;
+			opacity: 0;
+			pointer-events: none;
+			top: 80%;
+
+			&.card {
+				margin-top: -10px;
+			}
 		}
 	}
 
