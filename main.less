@@ -42,12 +42,30 @@
 		color: black;
 		display: flex;
 		align-items: center;
+		overflow: hidden;
 
 		> span {
 			position: absolute;
 			font-size: 1.2em;
 			flex: 1;
 			margin-left: .4em;
+		}
+
+		> span.go-nav {
+			right: 0;
+
+			background-color: @primary-button;
+			color: @primary-text;
+			height: 100%;
+			padding: 0 .5em;
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			transition: background-color .3s;
+
+			&:hover {
+				background-color: @primary-button-hover;
+			}
 		}
 
 		input[type="text"] {
