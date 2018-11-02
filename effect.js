@@ -16,6 +16,35 @@ Websom.Theme.handle(".theme-material", ".theme", function (config) {
 				});
 			}
 		},
+		"input, textarea, select": {
+			validationError: function (e, msg) {
+				let that = this;
+				let $this = $(this);
+				$this.addClass("invalid");
+				let found = false;
+
+				$this.parent().children(".validation-error").each(function () {
+					if (this._errorPointer == that) {
+						found = true;
+						$(this).html(msg);
+					}
+				});
+
+				if (!found) {
+					let n = $("<div class='validation-error'>" + msg + "</div>").insertAfter($this);
+					n[0]._errorPointer = that;
+				}
+			},
+			validationClear: function () {
+				let that = this;
+				$(this).removeClass("invalid");
+
+				$(this).parent().children(".validation-error").each(function () {
+					if (this._errorPointer == that)
+						$(this).remove();
+				});
+			}
+		},
 		".tabs > ul > li": {
 			click: function (e) {
 				var that = $(this);
