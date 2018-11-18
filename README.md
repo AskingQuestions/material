@@ -5,7 +5,7 @@ Pictures coming soon.
 
 ## Install
 
-Install from websom shell
+Install from websom console
 ```
 $ theme install material
 ```
